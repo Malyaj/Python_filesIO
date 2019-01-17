@@ -6,6 +6,7 @@ path = r"D:\Users\703143501\Documents\GE Confidential\WIP\2019\weekly_reports\Me
 fp= codecs.open(path, "r", "utf-16")
 lines= fp.readlines()
 
+#rows_to_ignore = [0,2]
 header_row_location = 2
 tab = '\t'
 
@@ -24,3 +25,5 @@ for line_number in range(len(lines)):
 # export this df to an excel file
 path_to_save = r"D:\Users\703143501\Documents\GE Confidential\WIP\2019\weekly_reports\Metric report FW 03\data\cdsi.csv"
 df.to_csv(path_to_save, index = False)
+
+# this could be more flexible
